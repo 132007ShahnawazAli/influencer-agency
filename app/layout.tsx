@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
+import { TextWidget } from "@livechat/widget-react";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -22,10 +23,7 @@ export default function RootLayout({
     <html lang="en" className={`${manrope.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
         <SmoothScroll>{children}</SmoothScroll>
-        <script
-          src="//code.tidio.co/qbwoqz96vfhxlh1qtungc0tjd3v7yo5q.js"
-          async
-        ></script>
+        <TextWidget organizationId="4dd61318-a919-4106-bc30-c93d448c0d5f" />
       </body>
     </html>
   );
